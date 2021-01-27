@@ -33,7 +33,7 @@
             <tbody>
                 <?php foreach ($contratos as $contrato): ?>
                 <tr> 
-                <td><?=$contrato->has('cliente') ? $this->Html->link($contrato->cliente->nombre, ['controller' => 'Clientes', 'action' => 'view', $contrato->cliente->id]) : ''?></td>
+                <td><?=$contrato->has('cliente') ? $contrato->cliente->nombre: ''?></td>
                     <td><?=$this->Number->format($contrato->montos)?></td>
                 </tr>
                 <?php endforeach;?>
